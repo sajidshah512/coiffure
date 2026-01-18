@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "coiffure",
+    "slug": "coiffure",
+    "version": "1.0.0",
+    "jsEngine": "jsc",
+    "plugins": [
+      "expo-web-browser",
+      "expo-video",
+      "expo-audio",
+        [
+          "expo-image-picker",
+          { "photosPermission": "Allow access to photos" }
+        ]
+    ],
+    "android": {
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      
+      "package": "com.anonymous.coiffure"
+    },
+    "ios": {
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to upload images."
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1cd5bbd4-4b0f-40df-90fe-a5072cf9e4a5"
+      }
+    }
+  }
+}
